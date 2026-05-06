@@ -78,19 +78,12 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
             <ul className="flex flex-col gap-4">
-                <li><a href="#"> Home </a></li>
-                <li><a href="#"> About Us </a></li>
-                <li><a href="#"> Our Products </a></li>
-                <li><a href="#"> Bulk Order </a></li>
-                <li><a href="#"> Blog </a></li>
-                </ul>
-
-            <div className="flex gap-4 pt-3">
-              <FaFacebookF />
-              <FaLinkedinIn />
-              <FaXTwitter />
-              <FaTiktok />
-            </div>
+              <li><a href="#"> Home </a></li>
+              <li><a href="#"> About Us </a></li>
+              <li><a href="#"> Our Products </a></li>
+              <li><a href="#"> Bulk Order </a></li>
+              <li><a href="#"> Blog </a></li>
+            </ul>
 
             <a className="flex items-center justify-center gap-2 bg-purple-600 text-white py-2 rounded-full">
               <FaViber />
