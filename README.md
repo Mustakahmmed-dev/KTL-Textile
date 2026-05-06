@@ -8,4 +8,4 @@
 ### Other pages
 - FAQs
 - Sitemap
-- 
+- Countries we deliver to (from VYL github)
