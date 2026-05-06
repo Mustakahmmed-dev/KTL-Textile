@@ -69,7 +69,7 @@ export default function SearchModal({ open, setOpen }) {
         </div>
 
         {/* Results */}
-        <div className="max-h-[400px] overflow-y-auto p-4 space-y-6">
+        <div className="max-h-100 overflow-y-auto p-4 space-y-6">
 
           {/* Products */}
           {(tab === "all" || tab === "products") && (
