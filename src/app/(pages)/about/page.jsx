@@ -182,11 +182,12 @@ export default function AboutPage() {
                         <p className="text-gray-600 leading-relaxed">
                             We prioritize clean environments, efficient workflows, and ethical
                             manufacturing practices throughout our operations.
+                            Interested in our work? Please let's know by <a href="/contact-us" className="underline hover:text-purple-600 hover:text-lg">contacting us.</a>
                         </p>
                     </div>
 
                     {/* Image */}
-                    <div className="relative w-full h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                    <div className="relative w-full h-[400px] md:rounded-3xl overflow-hidden shadow-xl">
                         <Image
                             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
                             alt="Factory"
@@ -194,7 +195,7 @@ export default function AboutPage() {
                             className="object-cover hover:scale-105 transition duration-700"
                         />
                     </div>
-                    <div className="relative w-full h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                    <div className="relative w-full h-[400px] md:rounded-3xl overflow-hidden shadow-xl">
                         <Image
                             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
                             alt="Factory"
@@ -202,7 +203,7 @@ export default function AboutPage() {
                             className="object-cover hover:scale-105 transition duration-700"
                         />
                     </div>
-                    <div className="relative w-full h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                    <div className="relative w-full h-[400px] md:rounded-3xl overflow-hidden shadow-xl">
                         <Image
                             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
                             alt="Factory"
@@ -213,20 +214,21 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* ================= CORPORATES ================= */}
-            <section className="bg-blue-600 py-20 px-6 text-white">
+            {/* Coorporates Joined us*/}
+            <section className=" py-20 px-6 ">
                 <div className="max-w-7xl mx-auto text-center">
 
-                    <span className="uppercase tracking-wider text-blue-100">
+                    <span className="uppercase tracking-wider text-blue-600">
                         Trusted Partnerships
                     </span>
 
                     <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-12">
-                        Corporates Joined With Us
+                        Our Corporates Customers
                     </h2>
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-
+                        <img className="h-24 " src="https://cdn.dribbble.com/userupload/37216476/file/original-41d0f850747139d400b9f0b82d487f37.png?resize=752x&vertical=center" alt="Fashion Hub" />
+                        <img className="h-24 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC0uDnlljDTeZKUX392MHc_4i0-175G7jJ1w&s" alt="" />
                         {["Fashion Hub", "Urban Wear", "Textile Pro", "Global Apparel"].map(
                             (brand, index) => (
                                 <div

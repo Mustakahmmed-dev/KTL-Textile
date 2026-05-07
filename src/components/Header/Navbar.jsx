@@ -18,16 +18,53 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="w-full bg-blue-600 text-white text-sm px-4 py-2 flex justify-between items-center">
+      <div className="w-full bg-purple-600 text-white text-sm px-4 py-2 flex justify-between items-center">
         <span className="hidden sm:block">
           Wholesale Textile Manufacturer in Yangon
         </span>
 
-        <div className="flex gap-4">
-          <FaFacebookF />
-          <FaLinkedinIn />
-          <FaXTwitter />
-          <FaTiktok />
+        <div className="flex items-center gap-2">
+
+          {/* Facebook */}
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-blue-500 hover:scale-110 transition duration-300"
+          >
+            <FaFacebookF size={12} />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-blue-700 hover:scale-110 transition duration-300"
+          >
+            <FaLinkedinIn size={12} />
+          </a>
+
+          {/* X / Twitter */}
+          <a
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-black hover:scale-110 transition duration-300"
+          >
+            <FaXTwitter size={12} />
+          </a>
+
+          {/* TikTok */}
+          <a
+            href="https://tiktok.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-pink-500 hover:scale-110 transition duration-300"
+          >
+            <FaTiktok size={12} />
+          </a>
+
         </div>
       </div>
 
@@ -37,16 +74,16 @@ export default function Navbar() {
 
           {/* Logo */}
           <div className="text-xl md:text-2xl font-bold text-blue-600">
-            KTL Textile
+            <a href="/">KTL Textile</a>
           </div>
 
           {/* Center Menu */}
           <div className="hidden md:flex gap-10 text-gray-700 font-medium">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
             <a href="/about">About </a>
-            <a href="#">Products</a>
-            <a href="#">Bulk Order</a>
-            <a href="#">Blog</a>
+            <a href="/products">Products</a>
+            <a href="/contact-us">Bulk Order</a>
+            <a href="/blog">Blog</a>
           </div>
 
           {/* Right Side */}
@@ -79,11 +116,11 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
             <ul className="flex flex-col gap-4">
-              <li><a href="#"> Home </a></li>
+              <li><a href="/"> Home </a></li>
               <li><a href="/about"> About </a></li>
-              <li><a href="#"> Products </a></li>
-              <li><a href="#"> Bulk Order </a></li>
-              <li><a href="#"> Blog </a></li>
+              <li><a href="/products"> Products </a></li>
+              <li><a href="/contact-us"> Bulk Order </a></li>
+              <li><a href="/blog"> Blog </a></li>
             </ul>
 
             <a href="https://viber://chat?number=95957657567" className="flex items-center justify-center gap-2 bg-purple-600 text-white py-2 rounded-full">
