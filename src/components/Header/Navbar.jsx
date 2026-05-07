@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Center Menu */}
           <div className="hidden md:flex gap-10 text-gray-700 font-medium">
             <a href="#">Home</a>
-            <a href="#">About </a>
+            <a href="/about">About </a>
             <a href="#">Products</a>
             <a href="#">Bulk Order</a>
             <a href="#">Blog</a>
@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="md:hidden bg-white px-6 py-5 space-y-4 shadow-lg">
             <ul className="flex flex-col gap-4">
               <li><a href="#"> Home </a></li>
-              <li><a href="#"> About </a></li>
+              <li><a href="/about"> About </a></li>
               <li><a href="#"> Products </a></li>
               <li><a href="#"> Bulk Order </a></li>
               <li><a href="#"> Blog </a></li>
