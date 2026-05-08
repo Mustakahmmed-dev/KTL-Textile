@@ -121,8 +121,8 @@ export default function Footer() {
                 <MapPin className="text-blue-500 mt-1" size={20} />
 
                 <p>
-                  Yangon, Myanmar <br />
-                  Wholesale Distribution Center
+                 အမှတ်(15) 127လမ်း၊ မင်္ဂလာတောင်ညွှန့်၊ ရန်ကုန်မြို့။, Yangon, Myanmar, 11211
+
                 </p>
               </div>
 
@@ -130,7 +130,7 @@ export default function Footer() {
               <div className="flex items-center gap-4">
                 <Phone className="text-blue-500" size={20} />
 
-                <p>+95 123 456 789</p>
+                <p>+95 9 515 8308</p>
               </div>
 
               {/* Email */}
@@ -141,12 +141,13 @@ export default function Footer() {
               </div>
 
               {/* Viber Button */}
-              <button className="mt-4 flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition px-5 py-3 rounded-full shadow-lg">
+              <a href="/" className="mt-4 flex
+               items-center gap-3 bg-purple-600 hover:bg-purple-700 transition px-5 py-3 rounded-full shadow-lg">
 
                 <FaViber size={20} />
 
                 Contact on Viber
-              </button>
+              </a>
 
             </div>
           </div>
