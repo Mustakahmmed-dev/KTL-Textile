@@ -1,10 +1,11 @@
 import Hero from "@/components/Home/Hero";
+import ProductsSection from "@/components/Home/ProductsSection";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      Products section <br />
+      <ProductsSection />
 
       Big Designed Graphics <br />
 
