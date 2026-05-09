@@ -19,8 +19,8 @@ export default function Navbar() {
     <>
       {/* Top Bar */}
       <div className="w-full bg-purple-600 text-white text-sm px-4 py-2 flex justify-between items-center">
-        <span className="hidden sm:block">
-          Wholesale Textile Manufacturer in Yangon
+        <span className="">
+          Wholesale Textile clothing provider in Yangon
         </span>
 
         <div className="flex items-center gap-2">
