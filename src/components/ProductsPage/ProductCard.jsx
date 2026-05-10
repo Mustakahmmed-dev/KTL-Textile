@@ -34,7 +34,7 @@ export default function ProductCard({ product }) {
         {/* PRICE */}
         <div className=" flex items-center justify-between">
           <span className="">
-            {product.price && `Price: ${product.price} mmk`}
+            {product.price && `Price: ${product.price}`}
           </span>
 
           <span

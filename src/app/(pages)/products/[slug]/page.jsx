@@ -109,14 +109,14 @@ export default async function ProductDetails({ params }) {
           </p>
 
           <div className="mt-4">
-            Availability: 
+            Availability:
             <span
               className={`px-4 py-2 rounded-full text-sm font-medium ${product.stockStatus === "in-stock"
                 ? " font-semibold text-green-700"
                 : "bg-red-100 font-semibold text-red-600"
                 }`}
             >
-               {product.stockStatus}
+              {product.stockStatus}
             </span>
 
           </div>
@@ -178,7 +178,7 @@ export default async function ProductDetails({ params }) {
             </a>
 
             <a href="https://viber://chat?number=95957657567" className="flex items-center justify-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full">
-              <FaViber size={20}/>
+              <FaViber size={20} />
               Chat on Viber
             </a>
 

@@ -29,7 +29,7 @@ export default async function ProductsSection() {
               <img
                 src={product.imageUrl}
                 className="h-60 md:h-48 w-full object-cover hover:scale-105 transition"
-                alt={product.name}
+                alt={product.title}
               />
             </Link>
 
@@ -37,17 +37,17 @@ export default async function ProductsSection() {
             <div className="p-4">
 
               <h2 className="font-semibold text-lg">
-                {product.name}
+                {product.title}
               </h2>
 
               <p className="text-sm text-gray-500">
-                SKU: {product.sku}
+                Price: {product.price && `${product.price}`}
               </p>
 
               {/* STOCK STATUS */}
               <p
                 className={`text-sm font-medium mt-1 ${
-                  product.stockStatus === "inStock"
+                  product.stockStatus === "in-stock"
                     ? "text-green-600"
                     : "text-red-500"
                 }`}

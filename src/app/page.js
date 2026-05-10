@@ -1,5 +1,7 @@
 import Hero from "@/components/Home/Hero";
+import LatestPosts from "@/components/Home/LatestPosts";
 import ProductsSection from "@/components/Home/ProductsSection";
+import VideoShow from "@/components/Home/VideoShow";
 
 export default function Home() {
   return (
@@ -8,9 +10,9 @@ export default function Home() {
       <ProductsSection />
 
       Big Designed Graphics <br />
+      <VideoShow />
+      <LatestPosts />
 
-      Video <br />
-      Latest Posts <br />
       Coorporate Customers ~ Looking Forward to your joining
 
 
