@@ -8,7 +8,9 @@ export async function getProducts() {
     price,
     "imageUrl": image.asset->url,
     stockStatus,
-    category
+    category>{
+    title
+    }
   }`;
 
   return await client.fetch(query);

@@ -21,7 +21,7 @@ export default async function ProductsPage() {
 
                         <h2>{product.name}</h2>
                         <p>Price: {product.price} mmk</p>
-                        <p>Category: {product.category}</p>
+                        <p>Category: {product.category?.title}</p>
 
                         <p style={{ color: product.stockStatus === "in-stock" ? "green" : "red" }}>
                             {product.stockStatus}
