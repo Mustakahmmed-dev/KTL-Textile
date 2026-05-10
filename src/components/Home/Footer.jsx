@@ -16,7 +16,7 @@ export default function Footer() {
 
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-600/20 blur-3xl rounded-full" />
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-600/20 blur-3xl rounded-full" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-300/20 blur-3xl rounded-full" />
 
       {/* Main Footer */}
       <div className="relative max-w-7xl mx-auto px-6 py-20 z-10">
@@ -61,22 +61,21 @@ export default function Footer() {
             </h3>
 
             <div className="flex flex-col gap-4 text-gray-400">
-
-              {[
-                "Home",
-                "About Us",
-                "Our Products",
-                "Blog",
-                "Contact",
-              ].map((item, index) => (
-                <Link
-                  href="#"
-                  key={index}
-                  className="hover:text-blue-400 hover:translate-x-1 transition duration-300"
-                >
-                  {item}
-                </Link>
-              ))}
+              <Link href="/" className="hover:text-blue-400 hover:translate-x-1 transition duration-300">
+                Home
+              </Link>
+              <Link href="/about" className="hover:text-blue-400 hover:translate-x-1 transition duration-300">
+                About Us
+              </Link>
+              <Link href="/products" className="hover:text-blue-400 hover:translate-x-1 transition duration-300">
+                Our Products
+              </Link>
+              <Link href="/contact-us" className="hover:text-blue-400 hover:translate-x-1 transition duration-300">
+                Contact Us
+              </Link>
+              <Link href="/blog" className="hover:text-blue-400 hover:translate-x-1 transition duration-300">
+                Blog
+              </Link>
 
             </div>
           </div>
@@ -117,11 +116,11 @@ export default function Footer() {
             <div className="space-y-5 text-gray-400">
 
               {/* Address */}
-              <div className="flex items-start gap-4">
+              <div className="flex gap-4">
                 <MapPin className="text-blue-500 mt-1" size={20} />
 
                 <p>
-                 အမှတ်(15) 127လမ်း၊ မင်္ဂလာတောင်ညွှန့်၊ ရန်ကုန်မြို့။, Yangon, Myanmar, 11211
+                  အမှတ်(15) 127လမ်း၊ မင်္ဂလာတောင်ညွှန့်၊ ရန်ကုန်မြို့။, Yangon, Myanmar, 11211
 
                 </p>
               </div>
@@ -141,8 +140,7 @@ export default function Footer() {
               </div>
 
               {/* Viber Button */}
-              <a href="/" className="mt-4 flex
-               items-center gap-3 bg-purple-600 hover:bg-purple-700 transition px-5 py-3 rounded-full shadow-lg">
+              <a href="/" className="font-semibold mt-4 flex items-center gap-3 bg-purple-600 hover:bg-purple-700 transition px-5 py-3 rounded-full shadow-lg">
 
                 <FaViber size={20} />
 

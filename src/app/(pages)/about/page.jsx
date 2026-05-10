@@ -30,7 +30,7 @@ export default function AboutPage() {
                         </h1>
 
                         {/* <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-              Premium wholesale textile manufacturer delivering quality clothing
+              Premium wholesale textile delivering quality clothing
               products across Myanmar and international markets.
             </p> */}
                     </div>
