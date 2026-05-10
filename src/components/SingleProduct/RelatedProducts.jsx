@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { client } from "@/lib/sanity";
 
-// 🔥 FETCH RELATED PRODUCTS
+// FETCH RELATED PRODUCTS
 async function getRelatedProducts(categoryId, currentProductId) {
 
   // ❌ NO CATEGORY
@@ -35,7 +35,7 @@ export default async function RelatedProducts({
     currentProductId
   );
 
-  // ❌ NO RELATED PRODUCTS
+  // NO RELATED PRODUCTS
   if (!products?.length) return null;
 
   return (
@@ -74,7 +74,7 @@ export default async function RelatedProducts({
           <Link
             key={product._id}
             href={`/products/${product.slug.current}`}
-            className="group border rounded-2xl overflow-hidden hover:shadow-lg transition bg-white"
+            className="group border border-purple-200 rounded overflow-hidden hover:shadow-lg transition bg-white"
           >
 
             {/* IMAGE */}

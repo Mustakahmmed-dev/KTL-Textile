@@ -1,14 +1,13 @@
 import Link from "next/link";
 import { client } from "@/lib/sanity";
 import PortableTextRenderer from "@/components/PortableTextRenderer";
-import RelatedProducts from "@/components/Products/RelatedProducts";
-import ProductImageViewer from "@/components/Products/ProductImageViewer";
+import RelatedProducts from "@/components/SingleProduct/RelatedProducts";
+import ProductImageViewer from "@/components/SingleProduct/ProductImageViewer";
 import { FaViber } from "react-icons/fa6";
 import { PhoneCallIcon } from "lucide-react";
 
 // Single product fetch
 async function getProduct(slug) {
-
   const query = `*[_type == "product" && slug.current == $slug][0]{
     _id,
     title,
@@ -21,7 +20,7 @@ async function getProduct(slug) {
 
     category->{
       _id,
-      title
+      name
     },
 
     description,
@@ -29,6 +28,43 @@ async function getProduct(slug) {
   }`;
 
   return await client.fetch(query, { slug });
+}
+export async function generateMetadata({ params }) {
+
+  const { slug } = await params;
+
+  const product = await getProduct(slug);
+
+  if (!product) {
+    return {
+      title: "Product Not Found",
+    };
+  }
+
+  return {
+
+    title: `${product.title} | KTL Textile`,
+
+    description:
+      product.description?.[0]?.children?.[0]?.text ||
+      "Premium textile products from KTL Textile.",
+
+    openGraph: {
+      title: product.title,
+
+      description:
+        product.description?.[0]?.children?.[0]?.text ||
+
+        "Premium textile products from KTL Textile.",
+
+      images: [
+        {
+          url: product.imageUrl,
+        },
+      ],
+    },
+
+  };
 }
 
 export default async function ProductDetails({ params }) {
@@ -69,18 +105,18 @@ export default async function ProductDetails({ params }) {
           </h1>
 
           <p className="text-gray-500 mt-2">
-            {product.category?.title}
+            Category: {product.category?.name}
           </p>
 
           <div className="mt-4">
-
+            Availability: 
             <span
               className={`px-4 py-2 rounded-full text-sm font-medium ${product.stockStatus === "in-stock"
-                ? "bg-green-100 font-semibold text-green-700"
+                ? " font-semibold text-green-700"
                 : "bg-red-100 font-semibold text-red-600"
                 }`}
             >
-              {product.stockStatus}
+               {product.stockStatus}
             </span>
 
           </div>
@@ -90,17 +126,17 @@ export default async function ProductDetails({ params }) {
 
             <div className="flex justify-between border-b border-gray-300 pb-3 pr-5">
               <span className="font-medium">SKU</span>
-              <span>{product.sku}</span>
+              <span className="font-semibold">{product.sku}</span>
             </div>
 
             <div className="flex justify-between border-b border-gray-300 pb-3 pr-5">
               <span className="font-medium">Series ID</span>
-              <span>{product.seriesId}</span>
+              <span className="font-semibold">{product.seriesId}</span>
             </div>
 
             <div className="flex justify-between border-b border-gray-300 pb-3 pr-5">
               <span className="font-medium">Rolls in Set</span>
-              <span>{product.rollsInSet}</span>
+              <span className="font-semibold">{product.rollsInSet}</span>
             </div>
 
           </div>
@@ -170,7 +206,7 @@ export default async function ProductDetails({ params }) {
           Tags:
         </h2>
         {product.tags?.length > 0 && (
-          <div className="flex flex-wrap gap-2  bg-slate-50 p-5 rounded-lg">
+          <div className="flex flex-wrap gap-2  bg-purple-50 p-5 rounded-lg">
             {product.tags.map((tag, index) => (
 
               <span
@@ -194,9 +230,9 @@ export default async function ProductDetails({ params }) {
 
       {/*Final CTA */}
 
-      <div className="mt-24 bg-gray-100 rounded-3xl p-10 text-center">
+      <div className="mt-24 rounded-3xl p-10 text-center">
 
-        <h2 className="text-3xl font-bold">
+        <h2 className="text-3xl text-pink-600 font-bold">
           Not found what you're looking for?
         </h2>
 
@@ -206,7 +242,7 @@ export default async function ProductDetails({ params }) {
 
         <Link
           href="/products"
-          className="inline-block mt-6 bg-black text-white px-8 py-3 rounded-xl hover:opacity-90 transition"
+          className="inline-block mt-6 bg-purple-700 text-white px-8 py-3 rounded-xl hover:opacity-90 transition"
         >
           Browse All Products
         </Link>
