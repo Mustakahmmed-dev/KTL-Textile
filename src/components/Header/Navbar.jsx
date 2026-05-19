@@ -83,7 +83,7 @@ export default function Navbar() {
             <a href="/about">About </a>
             <a href="/products">Products</a>
             <a href="/contact-us">Bulk Order</a>
-            <a href="/blog">Blog</a>
+            <a href="/news">News</a>
           </div>
 
           {/* Right Side */}
@@ -120,7 +120,7 @@ export default function Navbar() {
               <li><a href="/about"> About </a></li>
               <li><a href="/products"> Products </a></li>
               <li><a href="/contact-us"> Bulk Order </a></li>
-              <li><a href="/blog"> Blog </a></li>
+              <li><a href="/news"> News </a></li>
             </ul>
 
             <a href="https://viber://chat?number=95957657567" className="flex items-center justify-center gap-2 bg-purple-600 text-white py-2 rounded-full">

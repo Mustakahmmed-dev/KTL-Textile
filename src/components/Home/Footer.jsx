@@ -73,8 +73,8 @@ export default function Footer() {
               <Link href="/contact-us" className="hover:text-blue-400 hover:translate-x-1 transition duration-300">
                 Contact Us
               </Link>
-              <Link href="/blog" className="hover:text-blue-400 hover:translate-x-1 transition duration-300">
-                Blog
+              <Link href="/news" className="hover:text-blue-400 hover:translate-x-1 transition duration-300">
+                News
               </Link>
 
             </div>
@@ -117,7 +117,7 @@ export default function Footer() {
 
               {/* Address */}
               <div className="flex gap-4">
-                <MapPin className="text-blue-500 mt-1" size={20} />
+                <MapPin className="text-blue-500 shrink-0 mt-1" size={20} />
 
                 <p>
                   အမှတ်(15) 127လမ်း၊ မင်္ဂလာတောင်ညွှန့်၊ ရန်ကုန်မြို့။, Yangon, Myanmar, 11211

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getLatestPosts } from "@/lib/blog-api";
 
-export default async function LatestPosts() {
+export default async function LatestNews() {
 
   const posts = await getLatestPosts();
 
@@ -20,17 +20,17 @@ export default async function LatestPosts() {
           <div>
 
             <p className="text-xl uppercase tracking-[3px] text-gray-600">
-              Latest Updates
+              Latest News
             </p>
 
          
           </div>
 
           <Link
-            href="/blog"
+            href="/news"
             className="hidden md:inline-flex hover:underline font-medium"
           >
-            View All Posts
+            View All News
           </Link>
 
         </div>
@@ -42,7 +42,7 @@ export default async function LatestPosts() {
 
             <Link
               key={post._id}
-              href={`/blog/${post.slug.current}`}
+              href={`/news/${post.slug.current}`}
               className="group"
             >
 
@@ -93,10 +93,10 @@ export default async function LatestPosts() {
         <div className="mt-10 text-center md:hidden">
 
           <Link
-            href="/blog"
+            href="/news"
             className="inline-flex bg-black text-white px-6 py-3 rounded-full"
           >
-            View All Posts
+            View All News
           </Link>
 
         </div>

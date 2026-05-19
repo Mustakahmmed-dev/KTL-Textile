@@ -35,7 +35,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-[80vh] overflow-hidden">
+    <section className="relative w-full h-[100vh] overflow-hidden">
       
       {/* Slides */}
       <div
@@ -57,7 +57,7 @@ export default function Hero() {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/45" />
+            <div className="absolute inset-0 " />
 
             {/* Content */}
             <div className="absolute inset-0 flex items-center">
@@ -72,7 +72,7 @@ export default function Hero() {
                     {slide.subtitle}
                   </p>
 
-                  <a href="/products" className="rounded-full bg-transparent border border-gray-100 p-4 hover:bg-purple-600">
+                  <a href="/products" className="bg-transparent border border-gray-200 px-8 py-4 font-semibold hover:bg-purple-600">
                     View More
                   </a>
                 </div>

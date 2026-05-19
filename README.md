@@ -2,7 +2,7 @@
 - Home
 - About Us
 - Our Products
-- Blogs
+- News
 - Contact Now
 
 ### Other pages

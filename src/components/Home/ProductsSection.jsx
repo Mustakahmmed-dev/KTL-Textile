@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getProducts } from "@/lib/api";
+import { PhoneCallIcon } from "lucide-react";
 
 export default async function ProductsSection() {
   const products = await getProducts();
@@ -59,9 +60,15 @@ export default async function ProductsSection() {
               <div className="flex gap-2 mt-4">
 
                 {/* CALL BUTTON */}
+                {/* <a
+                  href="tel:+8801XXXXXXXXX"
+                  className=" text-center border border-gray-200 text-white text-sm"
+                >
+                  <span className="flex items-center justify-center  bg-blue-600 p-2 rounded-full"><PhoneCallIcon /></span>
+                </a> */}
                 <a
                   href="tel:+8801XXXXXXXXX"
-                  className="flex-1 text-center bg-blue-600 text-white py-2 rounded-lg text-sm hover:bg-blue-700"
+                  className="flex-1 text-center bg-transparent border border-gray-200 py-2 hover:text-white text-sm hover:bg-purple-600"
                 >
                   Call Now
                 </a>
@@ -69,7 +76,7 @@ export default async function ProductsSection() {
                 {/* VIBER BUTTON */}
                 <a
                   href="viber://chat?number=+8801XXXXXXXXX"
-                  className="flex-1 text-center bg-purple-600 text-white py-2 rounded-lg text-sm hover:bg-purple-700"
+                  className="flex-1 text-center bg-purple-600 text-white py-2 text-sm"
                 >
                   Viber
                 </a>

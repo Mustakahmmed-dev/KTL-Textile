@@ -3,7 +3,9 @@ export const metadata = {
     description: "KTL Textile is a leading company in Yangon supplying across the every state and division in Myanmar and in neighboring countries."
 }
 
+import ClientTestimony from "@/components/Reusable/ClientTestimony";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
     return (
@@ -29,10 +31,7 @@ export default function AboutPage() {
                             About KTL Textile
                         </h1>
 
-                        {/* <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-200">
-              Premium wholesale textile delivering quality clothing
-              products across Myanmar and international markets.
-            </p> */}
+                        
                     </div>
                 </div>
             </section>
@@ -70,9 +69,9 @@ export default function AboutPage() {
                             divisions of Myanmar and overseas markets.
                         </p>
 
-                        <button className="bg-purple-600 px-5 py-3 text-white">
+                        <Link href="/contact-us" className="bg-purple-600 px-5 py-3 text-white">
                             Message us to learn more
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -215,33 +214,7 @@ export default function AboutPage() {
             </section>
 
             {/* Coorporates Joined us*/}
-            <section className=" py-20 px-6 ">
-                <div className="max-w-7xl mx-auto text-center">
-
-                    <span className="uppercase tracking-wider text-blue-600">
-                        Trusted Partnerships
-                    </span>
-
-                    <h2 className="text-3xl md:text-5xl font-bold mt-3 mb-12">
-                        Our Corporates Customers
-                    </h2>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <img className="h-24 " src="https://cdn.dribbble.com/userupload/37216476/file/original-41d0f850747139d400b9f0b82d487f37.png?resize=752x&vertical=center" alt="Fashion Hub" />
-                        <img className="h-24 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC0uDnlljDTeZKUX392MHc_4i0-175G7jJ1w&s" alt="" />
-                        {["Fashion Hub", "Urban Wear", "Textile Pro", "Global Apparel"].map(
-                            (brand, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white/10 backdrop-blur-md rounded-2xl py-8 text-lg font-semibold hover:bg-white/20 transition"
-                                >
-                                    {brand}
-                                </div>
-                            )
-                        )}
-                    </div>
-                </div>
-            </section>
+            <ClientTestimony />
 
         </main>
     );

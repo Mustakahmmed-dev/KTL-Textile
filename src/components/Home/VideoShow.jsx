@@ -11,7 +11,7 @@ export default function VideoShow() {
 
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/zxDdNhaIW28?si=fhqN3d8YuWLa8Vcq"
+              src="https://www.youtube.com/embed/vDmUX_-7Kjo?si=I7or2ltxSakVimr4"
               title="KTL Textile Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
