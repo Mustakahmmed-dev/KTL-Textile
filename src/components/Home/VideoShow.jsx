@@ -5,7 +5,7 @@ export default function VideoShow() {
     <section className="py-10">
 
       <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <h2 className="text-3xl font-semibold text-center pb-4">Our Store in Yangon</h2>
+        <h2 className="text-3xl font-semibold text-center pb-4 text-gray-700">Our Store in Yangon</h2>
         <div className="rounded-3xl overflow-hidden shadow-xl">
           <div className="aspect-video">
 

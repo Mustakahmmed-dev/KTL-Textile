@@ -47,7 +47,7 @@ export default async function LatestNews() {
             >
 
               {/* IMAGE */}
-              <div className="overflow-hidden rounded-3xl">
+              <div className="overflow-hidden">
 
                 <img
                   src={post.imageUrl}
@@ -75,7 +75,7 @@ export default async function LatestNews() {
                 </p>
 
                 {/* TITLE */}
-                <h3 className="text-xl font-semibold mt-3 leading-snug group-hover:underline line-clamp-2">
+                <h3 className="text-xl font-semibold mt-3 leading-snug group-hover:underline group-hover:text-purple-600 line-clamp-2">
 
                   {post.title}
 

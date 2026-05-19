@@ -5,6 +5,7 @@ import RelatedProducts from "@/components/SingleProduct/RelatedProducts";
 import ProductImageViewer from "@/components/SingleProduct/ProductImageViewer";
 import { FaViber } from "react-icons/fa6";
 import { PhoneCallIcon } from "lucide-react";
+import ShareButtons from "@/components/News/ShareNews";
 
 // Single product fetch
 async function getProduct(slug) {
@@ -182,6 +183,10 @@ export default async function ProductDetails({ params }) {
               Chat on Viber
             </a>
 
+          </div>
+          <div className="mt-5 flex items-center gap-2">
+            <h3>Share</h3>
+            <ShareButtons title={product.name} />
           </div>
 
         </div>
