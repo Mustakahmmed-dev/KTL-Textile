@@ -1,8 +1,20 @@
+import GraphicView from "@/components/Home/GraphicView";
+import Hero from "@/components/Home/Hero";
+import LatestNews from "@/components/Home/LatestNews";
+import ProductsSection from "@/components/Home/ProductsSection";
+import VideoShow from "@/components/Home/VideoShow";
+import ClientTestimony from "@/components/Reusable/ClientTestimony";
 
 export default function Home() {
   return (
-    <div className="text-xl m-10 border-3 ">
-      Home Page
+    <div className="min-h-screen">
+      <Hero />
+      <ProductsSection />
+      <GraphicView />
+      <VideoShow />
+      <LatestNews />
+      <ClientTestimony />
+
     </div>
   );
 }

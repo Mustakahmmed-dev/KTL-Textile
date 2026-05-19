@@ -1,5 +1,6 @@
 import Navbar from "@/components/Header/Navbar";
 import "./globals.css";
+import Footer from "@/components/Home/Footer";
 
 export const metadata = {
   title: "KTL Textile - Leading Textile Company in Yangon, Myanmar",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Navbar />
       {children}
+      <Footer />
       </body>
     </html>
   );
